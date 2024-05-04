@@ -1,0 +1,345 @@
+body{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color:black;
+}
+.startingScreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #800000;
+    color: #ffffff;
+    font-size: 48px;
+    z-index: 9999; /* Ensure the starting screen is on top */
+    opacity: 1; /* Initially visible */
+    transition: opacity 1s ease-in-out; /* Add a fade effect */
+}
+
+.startingScreen.slide-up {
+    transform: translateY(-100%);
+    transition: transform 1s ease-in-out;
+}
+
+.startingScreen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+nav{
+    background-color: #111;
+    color:white;
+    padding: 3px;
+    margin: 0;
+}
+
+.navTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.navItem{
+    margin: 0px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    background-color: gray; 
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.searchInput{
+    border: none;
+    background-color: transparent;
+}
+
+.searchInput::placeholder{
+    color: lightgray;
+}
+
+.programmingTeam{
+    font-size: 30px;
+    font-family:'Arial';
+    margin: 5px;
+}
+
+
+.navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:1px
+}
+
+.menuItem {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width: 140px; /* Set the width and height of your image container */
+    height:16px;
+    background-size: cover;
+    margin: 1px; /* Adjust the margin as needed */
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding: 7px;
+
+    justify-content: space-between;
+}
+
+#picture1 {
+    background-image: url('oval.png');
+   
+}
+
+#picture2 {
+    background-image: url('oval.png');;
+}
+
+#picture3 {
+    background-image: url('oval.png');
+}
+
+#picture4 {
+    background-image: url('oval.png');
+}
+
+#picture5 {
+    background-image: url('oval.png');
+}
+
+.menuItem{
+    margin-right: 45px;
+    cursor: pointer;
+   
+}
+
+.slider{
+    background: url("https://images.pond5.com/digital-code-number-abstract-background-087317214_prevstill.jpeg");
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    overflow: hidden;
+    background-size: cover;
+
+    
+}
+
+.sliderWrapper{
+    display: flex;
+    width: 500vw;
+    transition: all 15s ease-in-out;
+}
+
+
+.sliderBg{
+    width: 900px;
+    height: 900px;
+    border-radius: 60%;
+    position: absolute;
+}
+
+.sliderImg{
+    z-index: 1;
+    width:550px;
+    height:550px;
+    border-radius: 130px;
+    
+}
+
+.sliderTitle {
+    position: absolute;
+    top: 75%; /* Adjust the top value to position vertically */
+    left: 80%; /* Adjust the left value to position horizontally */
+    transform: translate(-75%, -80%); /* Center the text using a combination of top and left values */
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+/* Additional styles for the sliderItem container */
+.sliderItem {
+    width: 500vw;
+    /*height:10vw;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Establish a positioning context for the absolute positioning of .sliderTitle */
+    overflow: hidden; /* Ensure content overflow is hidden */
+}
+
+
+.title{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(103, 99, 99);
+    z-index: 1;
+}
+
+
+.sliderItem:nth-child(1) .sliderBg{
+    background-color: rgba(128, 0, 0, 0.644);
+}
+.sliderItem:nth-child(2) .sliderBg{
+    background-color: rgba(255, 166, 0, 0.5);
+}
+.sliderItem:nth-child(3) .sliderBg{
+    background-color: rgba(128, 128, 128, 0.51);
+}
+.sliderItem:nth-child(4) .sliderBg{
+    background-color: rgba(128, 0, 0, 0.503);
+}
+.sliderItem:nth-child(5) .sliderBg{
+    background-color: rgba(255, 166, 0, 0.5);
+}
+
+.sliderItem:nth-child(1) .title{
+    background-color: rgba(128, 128, 128, 0.51);
+}
+.sliderItem:nth-child(2) .title{
+    background-color: rgba(128, 128, 128, 0.51);
+}
+.sliderItem:nth-child(3) .title{
+    background-color: rgba(128, 128, 128, 0.51);
+
+}
+.sliderItem:nth-child(4) .title{
+    background-color: rgba(128, 128, 128, 0.51);
+}
+.sliderItem:nth-child(5) .title{
+    background-color: rgba(128, 128, 128, 0.51);
+}
+
+
+.features{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    clip-path: polygon(0 9%, 100% 0, 100% 75%, 0% 100%);
+
+   
+  
+}
+
+
+.feature a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #007BFF; /* Change color on hover if needed */
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+.features {
+    background-color: orange;
+    padding: 15px;
+    display: flex;
+    justify-content: center; /* Center the child elements horizontally */
+    align-items: center; /* Center the child elements vertically */
+}
+
+.feature {
+    margin: 40px; /* Add margin for spacing between features */
+}
+
+.feature a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.featureIcon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+.featureIcon:hover {
+    transform: scale(1.2); /* You can adjust the scale factor as needed */
+  }
+.featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.featureDesc {
+    color: gray;
+    width: 50%;
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+
+footer{
+    display:flex;
+    background-color: white;
+}
+
+.footerLeft{
+    flex:2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.fMenuTitle{
+    font-size: 16px;
+}
+
+.fList{
+    padding:0;
+    letter-spacing: none;
+}
+.fListItem{
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+}
+.footerRight{
+    flex:1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fInput{
+    padding: 5px;
+}
+.fButton{
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+.fIcons{
+    display: flex;
+}
+.fIcon{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;  
+}
+.copyright{
+    font-weight: 300;
+    font-size: 14px;
+}
